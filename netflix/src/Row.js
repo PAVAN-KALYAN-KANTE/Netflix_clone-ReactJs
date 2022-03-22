@@ -20,22 +20,23 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
     fetchData();
   }, [fetchUrl]);
 
-  //   function handleclick(movie) {
-  //     console.log(movie);
-  //     if (trailerUrl) {
-  //       settrailerUrl("");
-  //     } else {
-  //       const mid = movie.id;
-  //       movieTrailer(movie.name || "")
-  //         .then((url) => {
-  //           const urlParams = new URLSearchParams(new URL(url).search);
-  //           console.log(urlParams);
-  //           settrailerUrl(urlParams.get("v"));
-  //           console.log(trailerUrl);
-  //         })
-  //         .catch((error) => console.error(error));
-  //     }
+  // function handleclick(movie) {
+  //   console.log(movie);
+  //   if (trailerUrl) {
+  //     settrailerUrl("");
+  //   } else {
+  //     const mid = movie.id;
+  //     movieTrailer(movie.name || "")
+  //       .then((url) => {
+  //         console.log(url);
+  //         const urlParams = new URLSearchParams(new URL(url).search);
+  //         console.log(urlParams);
+  //         settrailerUrl(urlParams.get("v"));
+  //         console.log(trailerUrl);
+  //       })
+  //       .catch((error) => console.error(error));
   //   }
+  // }
 
   const handleclick = async (movie) => {
     console.log(movie);
@@ -54,6 +55,14 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
       settrailerUrl(res);
     }
   };
+
+  // const handleclick = async (movie) => {
+  //   console.log(movie.name);
+
+  //   movieTrailer(movie.name).then((res) => {
+  //     settrailerUrl(res);
+  //   });
+  // };
 
   return (
     <div className={classes.row}>
