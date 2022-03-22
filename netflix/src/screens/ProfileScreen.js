@@ -4,9 +4,11 @@ import Nav from "../Nav";
 import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
 import { auth } from "../firebase";
+import { useNavigate } from "react-router-dom";
 
 function ProfileScreen() {
   const user = useSelector(selectUser);
+  const navigate = useNavigate();
   return (
     <div className={classes.ProfileScreen}>
       <Nav />

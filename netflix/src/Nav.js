@@ -24,6 +24,7 @@ function Nav() {
     <div className={cx(classes.nav, `${show && classes.nav_black}`)}>
       <div className={classes.nav_contents}>
         <img
+          onClick={() => navigate("/")}
           className={classes.nav_logo}
           src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
           alt=""
